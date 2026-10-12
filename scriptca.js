@@ -6,7 +6,7 @@
                 "Welcome to My Website!";
         }
          function changeColor() {
-            document.getElementById("page").style.backgroundColor = "pink";
+            document.getElementById("page").style.backgroundColor = "red";
         }
         
         
