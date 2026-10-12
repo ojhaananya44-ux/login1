@@ -1,0 +1,37 @@
+body{
+    background-color: pink;
+}
+#intro{
+    background-color: palevioletred;
+    border: solid;
+    text-align: center;
+}
+pre{
+    padding: top 20px;;
+
+    background-color: white;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: palevioletred;
+}
+#heading{
+    font-family: 'Times New Roman', Times, serif;
+    color: whitesmoke;
+    color: crimson;
+    
+}
+#image{
+    margin-top: 20px;
+    display: inline-block;
+    display: flex;
+    justify-content: space-between;
+}
+#change{
+    background-color: blueviolet;
+}
+.but{
+    margin-top: 10px;
+    background-color: crimson;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}

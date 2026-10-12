@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Event Registration</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+                  background-color: whitesmoke;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 500px;
+              margin: auto;
+            background-color: white;
+            padding: 25px;
+             border-radius: 12px;
+              box-shadow: 0 0 10px whitesmoke;
+        }
+
+        h1 {
+            text-align: center;
+            color: blue;
+            font-size: 28px;
+        }
+
+        label {
+            display: block;
+               margin-top: 15px;
+                font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            box-sizing: border-box;
+                border: 1px solid gray;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px 15px;
+            margin-top: 15px;
+                border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: blue;
+        }
+
+        #message {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        #error {
+            color: red;
+        }
+
+        #success {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1 id="heading">Student Event Registration</h1>
+
+        <button type="button" onclick="changeFontSize()">
+            Change Heading Font Size
+        </button>
+
+        <button type="button" onclick="toggleForm()">
+            Show / Hide Form
+        </button>
+
+        <form id="registrationForm">
+
+            <label for="studentName">Student Name:</label>
+            <input type="text" id="studentName"
+                   placeholder="Enter your name" required>
+
+            <label for="rollNumber">Student Roll Number:</label>
+            <input type="text" id="rollNumber"
+                   placeholder="Enter your roll number" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email"
+                   placeholder="Enter your email" required>
+
+            <label for="event">Select Event:</label>
+            <select id="event" required>
+                <option value="">-- Select an Event --</option>
+                <option value="Hackathon">Hackathon</option>
+                <option value="Coding Competition">Coding Competition</option>
+                <option value="Cultural Fest">Cultural Fest</option>
+                <option value="Sports Day">Sports Day</option>
+            </select>
+
+            <button type="submit">Register</button>
+
+        </form>
+
+        <div id="message"></div>
+
+    </div>
+
+    <script>
+        
+        function changeFontSize() {
+            let heading = document.getElementById("heading");
+
+            if (heading.style.fontSize == "28px") {
+                heading.style.fontSize = "36px";
+            } else {
+                heading.style.fontSize = "28px";
+            }
+        }
+
+    
+        function toggleForm() {
+            let form = document.getElementById("registrationForm");
+
+            if (form.style.display == "none") {
+                form.style.display = "block";
+            } else {
+                form.style.display = "none";
+            }
+        }
+
+
+        document.getElementById("registrationForm")
+            .addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+                let name = document.getElementById("studentName").value.trim();
+                let roll = document.getElementById("rollNumber").value.trim();
+                let email = document.getElementById("email").value.trim();
+                let selectedEvent = document.getElementById("event").value;
+
+                let message = document.getElementById("message");
+
+                
+                if (name == "" || roll == "" ||
+                    email == "" || selectedEvent == "") {
+
+                    message.style.color = "red";
+                    message.innerHTML = "Error: Please fill in all required fields.";
+                } else {
+                    message.style.color = "green";
+                    message.innerHTML =
+                        "Congratulations, " + name +
+                        "! You have successfully registered for " +
+                        selectedEvent + ". Your roll number is " + roll + ".";
+                }
+            });
+    </script>
+
+</body>
+</html>
+```

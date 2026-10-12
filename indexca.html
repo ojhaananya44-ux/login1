@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styleca.css">
+
+</head>
+<body id="page">
+    <div id="intro">
+    <h1 id="headline">CAMPUS EVENT MANAGEMENT</h1>
+    <h4 id="heading">Where campus life comes alive.</h4>
+    </div>
+    <div id="text">
+        <pre>Welcome to [Event Name], the premier campus 
+            gathering where innovation, creativity, and community come together.
+
+        </pre>
+
+    </div>
+
+    <div id="image">
+        <img src="/code/ca1.jfif" alt="fest" height="300px" width="200px">
+        <img src="/code/ca.jfif" alt="fest"height="300px" width="200px">
+        <img src="/code/college fest.jfif" alt="fest"height="300px" width="200">
+
+
+    </div>
+    <button class="but"  onclick="changeHeadline()">PRESSME</button>
+    <br>
+    <button class="but" id="bg"onclick="changeColor()">changeBG</button>
+    <br>
+    <button class="but" id="event" onclick="showHighlights()">show event highlights</button>
+    <p id="highlights" style="display: none;">
+        1. Coding Competition<br>
+        2. Dance Performance<br>
+        3. Singing Competition<br>
+        4. Prize Distribution
+    </p>
+    <script src="scriptca.js">
+        
+    
+        function changeHeadline() {
+            document.getElementById("headline").innerText =
+                "Welcome to My Website!";
+        }
+         function changeColor() {
+            document.getElementById("page").style.backgroundColor = "red";
+        }
+         function showHighlights() {
+            document.getElementById("highlights").style.display = "block";
+        }
+
+        
+        </script>
+        function 
+
+
+
+
+</body>
+</html>
